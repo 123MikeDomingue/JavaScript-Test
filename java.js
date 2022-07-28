@@ -64,10 +64,17 @@ const randomRestaurantsList = []
 
 randomRestaurant = (numOfRestaurants) =>{
 
- for (let i = 0; i < restaurants.length; i++)
+ for (let i = 0; i < numOfRestaurants; i++){
+  // random array index
+  const Index = Math.floor(Math.random() * restaurants.length + 1);
+
+  // This randomly selects restaurants that are added to randomRestaurantsList
+  randomRestaurantsList.push(restaurants[Index - 1]);
+ }
+
+ return randomRestaurantsList;
 
 
- return numOfRestaurants[Math.floor((Math.random()*restaurants.length))];
  
 
 }
